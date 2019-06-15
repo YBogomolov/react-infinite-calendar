@@ -1,9 +1,9 @@
-import {configure} from '@kadira/storybook';
-import {setOptions} from '@kadira/storybook-addon-options';
+import { configure } from '@kadira/storybook';
+import { setOptions } from '@kadira/storybook-addon-options';
 
 setOptions({
   name: 'INFINITE CALENDAR',
-  url: 'https://github.com/teikametrics/react-infinite-calendar',
+  url: 'https://github.com/YBogomolov/react-infinite-calendar',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: false,

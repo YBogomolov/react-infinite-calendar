@@ -3,7 +3,7 @@
 // Definitions by: Christian Chown <https://github.com/christianchown>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.6
-declare module '@teikametrics/react-infinite-calendar' {
+declare module '@YBogomolov/react-infinite-calendar' {
   import * as React from 'react';
 
   export interface SelectParams {
@@ -14,7 +14,7 @@ declare module '@teikametrics/react-infinite-calendar' {
 
   export interface CalendarProps {
     Component?: React.Component;
-    selected?: Date | boolean | {start: Date, end: Date};
+    selected?: Date | boolean | { start: Date, end: Date };
     width?: number | 'auto';
     height?: number | 'auto';
     min?: Date;
@@ -70,11 +70,11 @@ declare module '@teikametrics/react-infinite-calendar' {
     autoFocus?: boolean;
     tabIndex?: number;
   }
-  interface DefaultCalendar extends React.ChildContextProvider<CalendarProps> {}
-  export class DefaultCalendar extends React.Component<CalendarProps> {}
-  interface WithRangeCalendar extends React.ChildContextProvider<CalendarProps> {}
-  export class  WithRangeCalendar extends React.Component<CalendarProps> {}
+  interface DefaultCalendar extends React.ChildContextProvider<CalendarProps> { }
+  export class DefaultCalendar extends React.Component<CalendarProps> { }
+  interface WithRangeCalendar extends React.ChildContextProvider<CalendarProps> { }
+  export class WithRangeCalendar extends React.Component<CalendarProps> { }
   export function withRange(component: DefaultCalendar): WithRangeCalendar;
   export default DefaultCalendar;
-  export {DefaultCalendar as Calendar};
+  export { DefaultCalendar as Calendar };
 }

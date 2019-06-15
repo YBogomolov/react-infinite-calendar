@@ -1,12 +1,12 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/teikametrics/react-infinite-calendar/master/.github/logo.png" width="180"/>
+<img src="https://raw.githubusercontent.com/YBogomolov/react-infinite-calendar/master/.github/logo.png" width="180"/>
 </div>
 
 # React Infinite Calendar
-[![npm version](https://img.shields.io/npm/v/@teikametrics/react-infinite-calendar.svg)](https://www.npmjs.com/package/@teikametrics/react-infinite-calendar)
-[![downloads](https://img.shields.io/npm/dm/@teikametrics/react-infinite-calendar.svg)](https://www.npmjs.com/package/@teikametrics/react-infinite-calendar)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/teikametrics/react-infinite-calendar/blob/master/LICENSE)
-### Examples available here: <a href="#">http://teikametrics.github.io/react-infinite-calendar/</a>
+[![npm version](https://img.shields.io/npm/v/@YBogomolov/react-infinite-calendar.svg)](https://www.npmjs.com/package/@YBogomolov/react-infinite-calendar)
+[![downloads](https://img.shields.io/npm/dm/@YBogomolov/react-infinite-calendar.svg)](https://www.npmjs.com/package/@YBogomolov/react-infinite-calendar)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/YBogomolov/react-infinite-calendar/blob/master/LICENSE)
+### Examples available here: <a href="#">http://YBogomolov.github.io/react-infinite-calendar/</a>
 
 Features
 ---------------
@@ -22,7 +22,7 @@ Features
 * **Mobile-friendly** – Silky smooth scrolling on mobile
 
 <div style="padding:30px">
-<img src="https://raw.githubusercontent.com/teikametrics/react-infinite-calendar/master/.github/preview.gif" width="300" />
+<img src="https://raw.githubusercontent.com/YBogomolov/react-infinite-calendar/master/.github/preview.gif" width="300" />
 </div>
 
 Getting Started
@@ -30,19 +30,19 @@ Getting Started
 
 Using [npm](https://www.npmjs.com/):
 ```
-npm install @teikametrics/react-infinite-calendar react-addons-css-transition-group --save
+npm install @YBogomolov/react-infinite-calendar react-addons-css-transition-group --save
 ```
 
 ES6, CommonJS, and UMD builds are available with each distribution. For example:
 ```js
-import InfiniteCalendar from '@teikametrics/react-infinite-calendar';
-import '@teikametrics/react-infinite-calendar/styles.css'; // Make sure to import the default stylesheet
+import InfiniteCalendar from '@YBogomolov/react-infinite-calendar';
+import '@YBogomolov/react-infinite-calendar/styles.css'; // Make sure to import the default stylesheet
 ```
 
 You can also use a global-friendly UMD build:
 ```html
-<link rel="stylesheet" href="@teikametrics/react-infinite-calendar/styles.css">
-<script src="@teikametrics/react-infinite-calendar/umd/react-infinite-calendar.js"></script>
+<link rel="stylesheet" href="@YBogomolov/react-infinite-calendar/styles.css">
+<script src="@YBogomolov/react-infinite-calendar/umd/react-infinite-calendar.js"></script>
 <script>
 var InfiniteCalendar = window.InfiniteCalendar.default;
 ...
@@ -56,8 +56,8 @@ Usage
 ```js
 import React from 'react';
 import { render } from 'react-dom';
-import InfiniteCalendar from '@teikametrics/react-infinite-calendar';
-import '@teikametrics/react-infinite-calendar/styles.css'; // only needs to be imported once
+import InfiniteCalendar from '@YBogomolov/react-infinite-calendar';
+import '@YBogomolov/react-infinite-calendar/styles.css'; // only needs to be imported once
 
 // Render the Calendar
 var today = new Date();
@@ -74,36 +74,36 @@ render(
   document.getElementById('root')
 );
 ```
-For more usage examples, see [http://teikametrics.github.io/react-infinite-calendar/](http://teikametrics.github.io/react-infinite-calendar/) or check out some [code examples](https://github.com/teikametrics/react-infinite-calendar/tree/master/examples).
+For more usage examples, see [http://YBogomolov.github.io/react-infinite-calendar/](http://YBogomolov.github.io/react-infinite-calendar/) or check out some [code examples](https://github.com/YBogomolov/react-infinite-calendar/tree/master/examples).
 
 ### Prop Types
-| Property       | Type            | Default                                                                                                                              | Description                                                                                                                                                                                                                      |
-|:---------------|:----------------|:-------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| selected       | Date or Boolean | `new Date()`                                                                                                                         | Value of the date that appears to be selected. Set to `false` if you don't wish to have a date initially selected.                                                                                                               |
-| width          | Number          | `400`                                                                                                                                | Width of the calendar, in pixels                                                                                                                                                                                                 |
-| height         | Number          | `600`                                                                                                                                | Height of the calendar, in pixels                                                                                                                                                                                                |
-| min            | Date            | `new Date(1980, 0, 1)`                                                                                                               | The minimum month that can be scrolled to.                                                                                                                                                                                       |
-| max            | Date            | `new Date(2050, 11, 31)`                                                                                                             | The maximum month that can be scrolled to.                                                                                                                                                                                       |
-| minDate        | Date            | `new Date(1980, 0, 1)`                                                                                                               | The minimum date that is selectable.                                                                                                                                                                                             |
-| maxDate        | Date            | `new Date(2050, 11, 31)`                                                                                                             | The maximum date that is selectable.                                                                                                                                                                                             |
-| disabledDays   | Array<Number>   |                                                                                                                                      | Array of days of the week that should be disabled. For example, to disable Monday and Sunday: `[0, 6]`                                                                                                                           |
-| disabledDates  | Array<Date>     |                                                                                                                                      | Array of dates that should be disabled. For example: `[new Date(2017, 1, 8), new Date(), new Date(2017, 5, 17)]`                                                                                                                 |
-| display        | String          | `'days'`                                                                                                                             | Whether to display the `years` or `days` view.                                                                                                                                                                                   |
-| displayOptions | Object          | See&nbsp;[default&nbsp;displayOptions](https://github.com/teikametrics/react-infinite-calendar/blob/master/src/utils/defaultDisplayOptions.js) | See [display options](#display-options) section for more details.                                                                                                                                                                |
-| locale         | Object          | See&nbsp;[default&nbsp;locale](https://github.com/teikametrics/react-infinite-calendar/blob/master/src/utils/defaultLocale.js)          | By default, React Infinite Calendar comes with the `English` locale. You can use this to change the language, or change the first day of the week. See [date-fns documentation](https://date-fns.org/docs/I18n) for more details |
-| theme          | Object          | See&nbsp;[default&nbsp;theme](https://github.com/teikametrics/react-infinite-calendar/blob/master/src/utils/defaultTheme.js)            | Basic customization of the colors                                                                                                                                                                                                |
-| className      | String          |                                                                                                                                      | Optional CSS class name to append to the root `InfiniteCalendar` element.                                                                                                                                                        |
-| onSelect       | Function        |                                                                                                                                      | Callback invoked after beforeSelect() returns true, but before the state of the calendar updates                                                                                                                                 |
-| onScroll       | Function        |                                                                                                                                      | Callback invoked when the scroll offset changes. `function (scrollTop: number) {}`                                                                                                                                               |
-| onScrollEnd    | Function        |                                                                                                                                      | Callback invoked `150ms` after the last onScroll event is triggered. `function (scrollTop: number) {}`                                                                                                                           |
-| rowHeight      | Number          | `56`                                                                                                                                 | Height of each row in the calendar (each week is considered a `row`)                                                                                                                                                             |
-| autoFocus      | Boolean         | `true`                                                                                                                               | Whether the Calendar root should be auto-focused when it mounts. This is useful when `keyboardSupport` is enabled (the calendar must be focused to listen for keyboard events)                                                   |
-| tabIndex       | Number          | `1`                                                                                                                                  | Tab-index of the calendar                                                                                                                                                                                                        |
+| Property       | Type            | Default                                                                                                                                      | Description                                                                                                                                                                                                                      |
+| :------------- | :-------------- | :------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| selected       | Date or Boolean | `new Date()`                                                                                                                                 | Value of the date that appears to be selected. Set to `false` if you don't wish to have a date initially selected.                                                                                                               |
+| width          | Number          | `400`                                                                                                                                        | Width of the calendar, in pixels                                                                                                                                                                                                 |
+| height         | Number          | `600`                                                                                                                                        | Height of the calendar, in pixels                                                                                                                                                                                                |
+| min            | Date            | `new Date(1980, 0, 1)`                                                                                                                       | The minimum month that can be scrolled to.                                                                                                                                                                                       |
+| max            | Date            | `new Date(2050, 11, 31)`                                                                                                                     | The maximum month that can be scrolled to.                                                                                                                                                                                       |
+| minDate        | Date            | `new Date(1980, 0, 1)`                                                                                                                       | The minimum date that is selectable.                                                                                                                                                                                             |
+| maxDate        | Date            | `new Date(2050, 11, 31)`                                                                                                                     | The maximum date that is selectable.                                                                                                                                                                                             |
+| disabledDays   | Array<Number>   |                                                                                                                                              | Array of days of the week that should be disabled. For example, to disable Monday and Sunday: `[0, 6]`                                                                                                                           |
+| disabledDates  | Array<Date>     |                                                                                                                                              | Array of dates that should be disabled. For example: `[new Date(2017, 1, 8), new Date(), new Date(2017, 5, 17)]`                                                                                                                 |
+| display        | String          | `'days'`                                                                                                                                     | Whether to display the `years` or `days` view.                                                                                                                                                                                   |
+| displayOptions | Object          | See&nbsp;[default&nbsp;displayOptions](https://github.com/YBogomolov/react-infinite-calendar/blob/master/src/utils/defaultDisplayOptions.js) | See [display options](#display-options) section for more details.                                                                                                                                                                |
+| locale         | Object          | See&nbsp;[default&nbsp;locale](https://github.com/YBogomolov/react-infinite-calendar/blob/master/src/utils/defaultLocale.js)                 | By default, React Infinite Calendar comes with the `English` locale. You can use this to change the language, or change the first day of the week. See [date-fns documentation](https://date-fns.org/docs/I18n) for more details |
+| theme          | Object          | See&nbsp;[default&nbsp;theme](https://github.com/YBogomolov/react-infinite-calendar/blob/master/src/utils/defaultTheme.js)                   | Basic customization of the colors                                                                                                                                                                                                |
+| className      | String          |                                                                                                                                              | Optional CSS class name to append to the root `InfiniteCalendar` element.                                                                                                                                                        |
+| onSelect       | Function        |                                                                                                                                              | Callback invoked after beforeSelect() returns true, but before the state of the calendar updates                                                                                                                                 |
+| onScroll       | Function        |                                                                                                                                              | Callback invoked when the scroll offset changes. `function (scrollTop: number) {}`                                                                                                                                               |
+| onScrollEnd    | Function        |                                                                                                                                              | Callback invoked `150ms` after the last onScroll event is triggered. `function (scrollTop: number) {}`                                                                                                                           |
+| rowHeight      | Number          | `56`                                                                                                                                         | Height of each row in the calendar (each week is considered a `row`)                                                                                                                                                             |
+| autoFocus      | Boolean         | `true`                                                                                                                                       | Whether the Calendar root should be auto-focused when it mounts. This is useful when `keyboardSupport` is enabled (the calendar must be focused to listen for keyboard events)                                                   |
+| tabIndex       | Number          | `1`                                                                                                                                          | Tab-index of the calendar                                                                                                                                                                                                        |
 
 ### Display Options
 
 | Property                | Type    | Default      | Description                                                                                                                                      |
-|:------------------------|:--------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
+| :---------------------- | :------ | :----------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
 | layout                  | String  | `'portrait'` | Layout of the calendar. Should be one of `'portrait'` or `'landscape'`                                                                           |
 | showHeader              | Boolean | `true`       | Show/hide the header                                                                                                                             |
 | shouldHeaderAnimate     | Boolean | `true`       | Enable/Disable the header animation                                                                                                              |
@@ -113,7 +113,7 @@ For more usage examples, see [http://teikametrics.github.io/react-infinite-calen
 | hideYearsOnSelect       | Boolean | `true`       | Whether to automatically hide the `years` view on select.                                                                                        |
 | overscanMonthCount      | Number  | `4`          | Number of months to render above/below the visible months. Tweaking this can help reduce flickering during scrolling on certain browers/devices. |
 | todayHelperRowOffset    | Number  | `4`          | This controls the number of rows to scroll past before the *Today* helper appears                                                                |
-| showLabelsBetweenMonths | Boolean | `true`       | This will show month labels between each month                                                                                               |
+| showLabelsBetweenMonths | Boolean | `true`       | This will show month labels between each month                                                                                                   |
 
 Example usage of display options:
 ```jsx
@@ -133,7 +133,7 @@ React Infinite Calendar has very few dependencies. It relies on [`react-tiny-vir
 
 Contributions
 ------------
-Yes please! Feature requests / pull requests are welcome. [Learn how to contribute](https://github.com/teikametrics/react-infinite-calendar/blob/master/CONTRIBUTING.md)
+Yes please! Feature requests / pull requests are welcome. [Learn how to contribute](https://github.com/YBogomolov/react-infinite-calendar/blob/master/CONTRIBUTING.md)
 
 
 License
