@@ -241,10 +241,10 @@
   opacity: 1;
   transition: opacity 0.3s ease; }
 
-.Cal__transition__leave {
+.Cal__transition__exit {
   opacity: 1; }
 
-.Cal__transition__leaveActive {
+.Cal__transition__exitActive {
   opacity: 0;
   transition: opacity 0.3s ease; }
 /*  imported from Header.scss  */
@@ -343,11 +343,11 @@
   opacity: 1;
   transform: translate3d(0, 0, 0); }
 
-.Cal__Animation__leave {
+.Cal__Animation__exit {
   transform: translate3d(0, 0, 0);
   transition: 0.25s ease; }
 
-.Cal__Animation__leave.Cal__Animation__leaveActive {
+.Cal__Animation__exit.Cal__Animation__exitActive {
   opacity: 0;
   transform: translate3d(0, 100%, 0); }
 /*  imported from Month.scss  */
